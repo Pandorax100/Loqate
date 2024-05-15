@@ -1,6 +1,6 @@
-using Loqate.Models.Common;
+using Pandorax.Loqate.Models.Common;
 
-namespace Loqate.Models.Find;
+namespace Pandorax.Loqate.Models.Find;
 
 public class FindResponse : ApiResponseBase<FindItem>
 {

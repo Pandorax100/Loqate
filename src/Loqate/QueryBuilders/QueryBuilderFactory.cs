@@ -1,7 +1,7 @@
-using Loqate.Models.Find;
-using Loqate.Models.Retrieve;
+using Pandorax.Loqate.Models.Find;
+using Pandorax.Loqate.Models.Retrieve;
 
-namespace Loqate.QueryBuilders;
+namespace Pandorax.Loqate.QueryBuilders;
 
 public class QueryBuilderFactory
 {

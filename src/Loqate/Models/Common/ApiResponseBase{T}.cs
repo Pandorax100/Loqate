@@ -1,4 +1,4 @@
-﻿namespace Loqate.Models.Common;
+﻿namespace Pandorax.Loqate.Models.Common;
 
 public class ApiResponseBase<T>
 {

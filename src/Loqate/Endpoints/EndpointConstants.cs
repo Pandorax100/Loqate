@@ -1,4 +1,4 @@
-namespace Loqate.Endpoints;
+namespace Pandorax.Loqate.Endpoints;
 
 internal static class EndpointConstants
 {

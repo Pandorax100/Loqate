@@ -1,10 +1,10 @@
 using System.Net.Http.Json;
-using Loqate.Endpoints;
-using Loqate.Models.Find;
-using Loqate.Models.Retrieve;
-using Loqate.QueryBuilders;
+using Pandorax.Loqate.Endpoints;
+using Pandorax.Loqate.Models.Find;
+using Pandorax.Loqate.Models.Retrieve;
+using Pandorax.Loqate.QueryBuilders;
 
-namespace Loqate;
+namespace Pandorax.Loqate;
 
 public class LoqateService : ILoqateService
 {

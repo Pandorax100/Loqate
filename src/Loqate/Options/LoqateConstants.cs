@@ -1,4 +1,4 @@
-namespace Loqate.Options;
+namespace Pandorax.Loqate.Options;
 
 public class LoqateConstants
 {

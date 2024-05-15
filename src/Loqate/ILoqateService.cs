@@ -1,7 +1,7 @@
-using Loqate.Models.Find;
-using Loqate.Models.Retrieve;
+using Pandorax.Loqate.Models.Find;
+using Pandorax.Loqate.Models.Retrieve;
 
-namespace Loqate;
+namespace Pandorax.Loqate;
 
 public interface ILoqateService
 {

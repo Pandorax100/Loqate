@@ -1,7 +1,7 @@
-using Loqate.Models.Find;
 using Microsoft.AspNetCore.WebUtilities;
+using Pandorax.Loqate.Models.Find;
 
-namespace Loqate.QueryBuilders;
+namespace Pandorax.Loqate.QueryBuilders;
 
 internal class FindRequestQueryBuilder(FindRequestParameters parameters) : IQueryBuilder
 {

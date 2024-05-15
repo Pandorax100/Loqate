@@ -1,4 +1,4 @@
-namespace Loqate.QueryBuilders;
+namespace Pandorax.Loqate.QueryBuilders;
 
 public interface IQueryBuilder
 {

@@ -1,4 +1,4 @@
-namespace Loqate.Models.Retrieve;
+namespace Pandorax.Loqate.Models.Retrieve;
 
 /// <summary>
 /// Represents the request parameters for the address retrieve request.

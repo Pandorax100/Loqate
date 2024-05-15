@@ -1,4 +1,4 @@
-namespace Loqate.Models.Find;
+namespace Pandorax.Loqate.Models.Find;
 
 /// <summary>
 /// Represents the request parameters for the capture find API endpoint.

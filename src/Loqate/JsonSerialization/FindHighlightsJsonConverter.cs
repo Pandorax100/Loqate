@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Loqate.JsonSerialization;
+namespace Pandorax.Loqate.JsonSerialization;
 
 internal class FindHighlightsJsonConverter : JsonConverter<List<string>>
 {

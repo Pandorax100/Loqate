@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Loqate.Models.Retrieve;
+namespace Pandorax.Loqate.Models.Retrieve;
 
 public class RetrieveItem
 {

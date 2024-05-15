@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
-using Loqate.JsonSerialization;
+using Pandorax.Loqate.JsonSerialization;
 
-namespace Loqate.Models.Find;
+namespace Pandorax.Loqate.Models.Find;
 
 public class FindItem
 {

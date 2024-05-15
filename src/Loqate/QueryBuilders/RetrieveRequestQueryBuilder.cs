@@ -1,7 +1,7 @@
-using Loqate.Models.Retrieve;
 using Microsoft.AspNetCore.WebUtilities;
+using Pandorax.Loqate.Models.Retrieve;
 
-namespace Loqate.QueryBuilders;
+namespace Pandorax.Loqate.QueryBuilders;
 
 internal class RetrieveRequestQueryBuilder(RetrieveRequest parameters) : IQueryBuilder
 {

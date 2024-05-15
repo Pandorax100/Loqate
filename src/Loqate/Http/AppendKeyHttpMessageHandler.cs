@@ -1,8 +1,8 @@
-using Loqate.Options;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
+using Pandorax.Loqate.Options;
 
-namespace Loqate.Http;
+namespace Pandorax.Loqate.Http;
 
 internal class AppendKeyHttpMessageHandler(IOptions<LoqateOptions> options) : DelegatingHandler
 {

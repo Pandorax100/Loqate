@@ -1,10 +1,11 @@
-using Loqate.Http;
-using Loqate.Options;
-using Loqate.QueryBuilders;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Pandorax.Loqate;
+using Pandorax.Loqate.Http;
+using Pandorax.Loqate.Options;
+using Pandorax.Loqate.QueryBuilders;
 
-namespace Loqate.DependencyInjection;
+namespace Pandorax.Loqate.DependencyInjection;
 
 public static class ServiceCollectionExtensions
 {

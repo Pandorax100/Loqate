@@ -1,48 +1,92 @@
-# Project Title
+# Pandorax100.Loqate
 
-A brief description of what the project does and who it's for
+Pandorax100.Loqate is a .NET library that provides easy integration with the [Loqate API](https://www.loqate.com) for address verification, geocoding, and other location-based services.
 
 ## Table of Contents
 
-- [Project Title](#project-title)
-  - [Table of Contents](#table-of-contents)
-  - [About the Project](#about-the-project)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
-
-## About the Project
-
-Here you can provide more detailed information about your project. Explain its purpose, features, and any other relevant details. You can also include screenshots or diagrams to illustrate how the project works.
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
 
 ## Getting Started
 
-These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
-
 ### Prerequisites
-
-List any software, libraries, or dependencies that users need to have installed before they can use your project.
+An API key is needed from [Loqate](https://www.loqate.com)
 
 ### Installation
 
-Provide step-by-step instructions on how to install your project. Make sure to include any configuration steps that users need to follow.
+You can install Pandorax100.Loqate via NuGet Package Manager or .NET CLI.
+
+#### NuGet Package Manager:
+
+```bash
+Install-Package Pandorax100.Loqate
+```
+
+#### .NET CLI:
+```bash
+dotnet add package Pandorax100.Loqate
+```
 
 ## Usage
 
-Provide examples and usage instructions for your project. Show users how to get the most out of your project and include any relevant code snippets.
+To get started using Pandorax100.Loqate, follow these steps:
 
-## Contributing
+### Configuration
 
-If you would like to contribute to the project, provide guidelines for how others can do so. This might include information on how to submit bug reports, feature requests, or code contributions.
+Make sure to have the API key available to your application configuration, whether it be in your user secrets, appsettings.json, or another configuration provider you have configured.
 
-## License
+### Adding Services to Dependency Injection Container
 
-Specify the license under which your project is distributed. If you're not sure which license to use, you can use an online tool to help you choose.
+To use Pandorax100.Loqate with dependency injection, you need to register the required services in your application's dependency injection container.
 
-## Contact
+#### Example for ASP.NET Core:
 
-Provide contact information for the project maintainer or team. This could include an email address, link to a GitHub profile, or other contact information.
+In an ASP.NET Core application's `Program.cs`, add the following code after initialising the `WebApplicationBuilder`:
+
+```csharp
+builder.Services
+    .Configure<LoqateOptions>(options =>
+    {
+        options.Key = builder.Configuration["Loqate:ApiKey"];
+    })
+    .AddLoqate();
+```
+
+#### Injecting the Loqate Service
+
+Once you have registered the LoqateService with the dependency injection container, you can inject it into your classes where needed.
+
+##### Example Usage in a Controller:
+
+```csharp
+using Pandorax100.Loqate;
+
+[ApiController]
+[Route("[controller]")]
+public class AddressController : ControllerBase
+{
+    private readonly ILoqateService _loqateService;
+
+    public AddressController(ILoqateService loqateService)
+    {
+        _loqateService = loqateService;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> FindAddresses(string text)
+    {
+        FindRequestParameters requestParameters = new(text)
+        {
+            Countries = ["GB"]
+        };
+
+        FindResponse addresses = await _loqateService.FindAddressesAsync(requestParameters);
+
+        return Ok(addresses);
+    }
+}
+```
+
+In this example, the `ILoqateService` is injected into the `AddressController`, allowing the controller to use the Loqate service for address lookup.

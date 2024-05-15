@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Pandorax100.Loqate</PackageId>
+    <PackageId>Pandorax.Loqate</PackageId>
     <PackageVersion>0.0.0-alpha001</PackageVersion>
     <Authors>Liam McDermott</Authors>
     <Description>HTTP API Client for Loqate address services.</Description>

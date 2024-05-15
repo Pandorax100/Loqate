@@ -1,6 +1,6 @@
-# Pandorax100.Loqate
+# Pandorax.Loqate
 
-Pandorax100.Loqate is a .NET library that provides easy integration with the [Loqate API](https://www.loqate.com) for address verification, geocoding, and other location-based services.
+Pandorax.Loqate is a .NET library that provides easy integration with the [Loqate API](https://www.loqate.com) for address verification, geocoding, and other location-based services.
 
 ## Table of Contents
 
@@ -16,22 +16,22 @@ An API key is needed from [Loqate](https://www.loqate.com)
 
 ### Installation
 
-You can install Pandorax100.Loqate via NuGet Package Manager or .NET CLI.
+You can install Pandorax.Loqate via NuGet Package Manager or .NET CLI.
 
 #### NuGet Package Manager:
 
 ```bash
-Install-Package Pandorax100.Loqate
+Install-Package Pandorax.Loqate
 ```
 
 #### .NET CLI:
 ```bash
-dotnet add package Pandorax100.Loqate
+dotnet add package Pandorax.Loqate
 ```
 
 ## Usage
 
-To get started using Pandorax100.Loqate, follow these steps:
+To get started using Pandorax.Loqate, follow these steps:
 
 ### Configuration
 
@@ -39,7 +39,7 @@ Make sure to have the API key available to your application configuration, wheth
 
 ### Adding Services to Dependency Injection Container
 
-To use Pandorax100.Loqate with dependency injection, you need to register the required services in your application's dependency injection container.
+To use Pandorax.Loqate with dependency injection, you need to register the required services in your application's dependency injection container.
 
 #### Example for ASP.NET Core:
 
@@ -61,7 +61,7 @@ Once you have registered the LoqateService with the dependency injection contain
 ##### Example Usage in a Controller:
 
 ```csharp
-using Pandorax100.Loqate;
+using Pandorax.Loqate;
 
 [ApiController]
 [Route("[controller]")]

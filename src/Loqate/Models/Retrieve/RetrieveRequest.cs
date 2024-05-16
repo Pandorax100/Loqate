@@ -8,7 +8,7 @@ public class RetrieveRequest(string id)
     /// <summary>
     /// The Id from a Find method to retrieve the details for.
     /// </summary>
-    public required string Id { get; set; } = id;
+    public string Id { get; set; } = id;
 
     public string? Field1Format { get; set; }
     public string? Field2Format { get; set; }

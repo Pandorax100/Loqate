@@ -34,7 +34,7 @@ public class LoqateService : ILoqateService
     {
         IQueryBuilder queryBuilder = _queryBuilderFactory.GetQueryBuilder(parameters);
 
-        string url = queryBuilder.AppendQueryString(EndpointConstants.FindEndpoint);
+        string url = queryBuilder.AppendQueryString(EndpointConstants.RetrieveEndpoint);
 
         RetrieveResponse? response = await _httpClient.GetFromJsonAsync<RetrieveResponse>(url);
 

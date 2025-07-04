@@ -190,12 +190,15 @@ public class ServerOptions
     public string? MinimumPostcode { get; set; }
 
     /// <summary>
-    /// If this option is set to TRUE or ON, unverified fields will not be output in Address fields(Address, Address1, Address2, etc.).​
+    /// If this option is set to TRUE or ON, unverified fields will not be output in Address fields(Address, Address1, Address2, etc.).
     /// </summary>
     public bool? SuppressUnmatched { get; set; }
 
     /// <summary>
-    /// Used to specify the order in which the Search output results should be sorted.To sort in alphabetical order use ‘Alphabetical’, or alternatively specify ‘AVC’ to sort from the highest verification level to the lowest verification level. The option can also be set to ‘Similarity’ giving an indication of the percentage of the input characters that have been matched in the output.​
+    /// Used to specify the order in which the Search output results should be sorted.
+    /// To sort in alphabetical order use ‘Alphabetical’, or alternatively specify ‘AVC’ to
+    /// sort from the highest verification level to the lowest verification level. The option can also be set to
+    /// ‘Similarity’ giving an indication of the percentage of the input characters that have been matched in the output.
     /// </summary>
     public string? OutputSortType { get; set; }
 
